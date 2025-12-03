@@ -20,3 +20,11 @@ app.use(rateLimiter);
 app.use(errorHandler);
 
 module.exports = app;
+const path = require('path');
+
+// Serve static files from frontend/dist
+app.use(express.static(path.join(__dirname, '../frontend/dist')));
+
+// Handle unknown routes by serving the frontend app
+app.get('*', (req, res) => {
+res.sendFile(path.join(__dirname, '../frontend/dist/index.html'));
