@@ -1,0 +1,22 @@
+.evscanner {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+.evscanner h3 {
+  margin-bottom: 1rem;
+}
+.evscanner ul {
+  list-style: none;
+  padding-left: 0;
+}
+.evscanner li {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+.evscanner .error {
+  color: red;
+  font-weight: bold;
+}

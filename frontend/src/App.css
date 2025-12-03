@@ -1,0 +1,288 @@
+:root {
+  --bg: #020617;
+  --bg-elevated: #020617;
+  --bg-card: #020617;
+  --accent: #22c55e;
+  --accent-soft: rgba(34, 197, 94, 0.15);
+  --accent-strong: #16a34a;
+  --accent-danger: #ef4444;
+  --text: #f9fafb;
+  --text-muted: #9ca3af;
+  --border-subtle: #1f2937;
+  --pill-bg: #020617;
+  --pill-border: #1f2937;
+  --pill-fair-bg: rgba(148, 163, 184, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617 60%);
+  color: var(--text);
+/* MAIN PAGE LAYOUT */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+/* HERO */
+.hero {
+  margin-bottom: 24px;
+  text-align: center;
+.logo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 12px rgba(34, 197, 94, 0.3));
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: var(--text-muted);
+.badge-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.35);
+h1 {
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 12px 0 8px;
+  letter-spacing: -0.03em;
+.hero-subtitle {
+  font-size: 14px;
+  max-width: 520px;
+.hero-actions {
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+.hero-note {
+  font-size: 12px;
+/* BUTTONS */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #022c22;
+  padding: 10px 24px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(34, 197, 94, 0.35);
+  gap: 8px;
+  transition: transform 0.1s ease, box-shadow 0.1s ease,
+    filter 0.1s ease;
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: default;
+  box-shadow: none;
+  transform: none;
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 16px 35px rgba(34, 197, 94, 0.45);
+.btn-outline {
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: transparent;
+  padding: 4px 10px;
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+/* LAYOUT */
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.2fr);
+  gap: 18px;
+  margin-top: 20px;
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+/* PANELS */
+.panel {
+  background: rgba(15, 23, 42, 0.94);
+  border-radius: 16px;
+  border: 1px solid rgba(15, 23, 42, 0.98);
+  padding: 14px 14px 16px;
+  box-shadow:
+    0 18px 40px rgba(15, 23, 42, 0.9),
+    0 0 1px rgba(15, 23, 42, 0.9);
+.panel-header {
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+.panel-title {
+.panel-subtitle {
+/* FILTERS */
+.filters-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-auto-rows: auto;
+  gap: 10px;
+  margin-top: 8px;
+@media (max-width: 700px) {
+  .filters-grid {
+.field {
+  flex-direction: column;
+  gap: 4px;
+.field label {
+  letter-spacing: 0.09em;
+.input,
+input,
+select {
+  padding: 8px 11px;
+  border: 1px solid var(--border-subtle);
+  background: radial-gradient(circle at top left, #020617, #020617);
+  font-size: 13px;
+  outline: none;
+  appearance: none;
+.input:focus,
+input:focus,
+select:focus {
+  border-color: rgba(34, 197, 94, 0.7);
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.3);
+  padding-right: 30px;
+  background-image: linear-gradient(45deg, transparent 50%, #6b7280 50%),
+    linear-gradient(135deg, #6b7280 50%, transparent 50%);
+  background-position:
+    calc(100% - 15px) 12px,
+    calc(100% - 10px) 12px;
+  background-size: 5px 5px, 5px 5px;
+  background-repeat: no-repeat;
+.filters-footer {
+  margin-top: 10px;
+.filters-footer small {
+/* RESULTS */
+.results-meta {
+.tag {
+  padding: 2px 8px;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+.tag-ev {
+  background: var(--accent-soft);
+  border-color: rgba(34, 197, 94, 0.5);
+  color: #bbf7d0;
+.results-list {
+  margin-top: 6px;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 4px;
+/* RESULT CARD */
+.result-card {
+  border-radius: 14px;
+  border: 1px solid rgba(30, 64, 175, 0.7);
+  padding: 8px 10px 9px;
+    0 14px 28px rgba(15, 23, 42, 0.9),
+    0 0 0 1px rgba(15, 23, 42, 1);
+.result-card:hover {
+  border-color: rgba(34, 197, 94, 0.55);
+    0 18px 34px rgba(15, 23, 42, 0.95),
+/* UTILITIES */
+.flex-between {
+.pill-row {
+  margin-top: 4px;
+.pill {
+  padding: 3px 8px;
+  font-size: 10px;
+  border: 1px solid var(--pill-border);
+  background: var(--pill-bg);
+.pill-strong {
+  border-color: rgba(34, 197, 94, 0.6);
+  background: rgba(21, 128, 61, 0.1);
+.pill-fair {
+  background: var(--pill-fair-bg);
+.small {
+  line-height: 1.4;
+.ev-positive {
+  color: #4ade80;
+.ev-negative {
+  color: #f97373;
+/* PARLAY */
+.parlay-leg {
+  border-radius: 10px;
+  border: 1px dashed rgba(148, 163, 184, 0.7);
+  padding: 6px 8px;
+  background: rgba(15, 23, 42, 0.92);
+.parlay-leg-header {
+.parlay-meta {
+  margin-top: 3px;
+.parlay-remove {
+.parlay-remove:hover {
+  color: var(--accent-danger);
+.parlay-controls {
+/* FOOTER NOTE */
+.footer-note {
+  margin-top: 12px;
+
+.bb-module-card {
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 12px;
+}
+.bb-module-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.bb-module-body {
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+.bb-module-note {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+
+
+.bb-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.bb-form-row input,
+.bb-form-row select {
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+}
+
+.bb-btn {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.bb-error {
+  margin-top: 8px;
+  color: #ff6b6b;
+  font-size: 0.8rem;
+}
+
+.bb-history-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.bb-module-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 4px 0;
+}
